@@ -9,6 +9,11 @@ tasks:
     rmdir rapid-curation-main-test_data
     gunzip test_data/*.gz
 
+- name: SETUP - Download ASG data
+  init: |
+     pip3 install gdown -y
+     gdown https://drive.google.com/drive/folders/1FyVLWlbbkVTI6fKEWMBqpCbjCvjJuI8W --folder -O /workspace/asg_data
+
 - name: SETUP - Download PretextView
   init: |
     cd /workspace
