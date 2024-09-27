@@ -11,8 +11,8 @@ tasks:
 
 - name: SETUP - Download ASG data
   init: |
-     pip3 install gdown -y
-     gdown https://drive.google.com/drive/folders/1FyVLWlbbkVTI6fKEWMBqpCbjCvjJuI8W --folder -O /workspace/asg_data
+    cd /workspace
+    curl -L "http://dp24.cog.sanger.ac.uk/asg_data.tar.gz" | tar xzf -
 
 - name: SETUP - Download PretextView
   init: |
