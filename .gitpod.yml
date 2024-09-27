@@ -12,7 +12,7 @@ tasks:
 - name: SETUP - Download ASG data
   init: |
     cd /workspace
-    curl -L "http://dp24.cog.sanger.ac.uk/asg_data.tar.gz" | tar xzf -
+    curl -L "http://dp24.cog.sanger.ac.uk/bga_asg.tar.gz" | tar xzf -
 
 - name: SETUP - Download PretextView
   init: |
