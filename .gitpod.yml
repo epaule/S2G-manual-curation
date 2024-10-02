@@ -20,6 +20,21 @@ tasks:
     wget  https://github.com/wtsi-hpag/PretextView/releases/download/0.2.5/PretextView_Linux-x86-64.zip
     unzip PretextView_Linux-x86-64.zip
 
+- name: SETUP - Download MiniProt
+  init: |
+    cd /workspace
+    git clone --depth=1 https://github.com/lh3/miniprot
+    cd miniprot
+    make
+
+- name: SETUP - Download MicroFinder
+  init: |
+    cd /workspace
+    git clone --depth=1 https://github.com/Aquatic-Symbiosis-Genomics-Project/MicroFinder.git
+    cd MicroFinder
+    bundler install
+
+
 - name: SETUP - Download the rapid-curation scripts
   init: |
     cd /workspace
@@ -56,7 +71,7 @@ tasks:
     mamba activate rapid
     /workspace/mambaforge/bin/pip3 install click ruff
     /workspace/mambaforge/bin/python3 -m pip install agp-tpf-utils/
-    export PATH=/workspace:$PATH
+    export PATH=/workspace:/workspace/miniprot:$PATH
     gp preview https://www.thebgacademy.org/BGA24/sessions/Genome-Curation
     clear
     bash S2G-manual-curation/welcome.sh
