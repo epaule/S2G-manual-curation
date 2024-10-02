@@ -72,7 +72,7 @@ This is achieved by navigating to the menu in PretextView (keyboard shortcut "u"
 ### Step 6. Run rapid_prextext2tpf_XL. This takes as input your outputted agp, your edited tpf and the original fasta file. The output of this script is a csv file reflecting the chromosomes, a new tpf file that reflects the structure of what the new curated fasta will look like and a tpf file for an haplotigs that were marked in the curation.
 
 ```
-python rapid_pretext2tpf_XL.py ./test_data/ilThyBati1.PB.asm1.purge1.polish1.scaff1.decontaminated.fa ./test_data/ilThyBati1_precurated.pretext.agp_1
+pretext-to-tpf -a ./test_data/ilThyBati1.PB.asm1.purge1.polish1.scaff1.decontaminated.fa.tpf -p ./test_data/ilThyBati1_precurated.pretext.agp_1 -o ilThyBati1.1.tpf
 ```
 
 Output files will appear in the working directory and will be named: 
@@ -83,7 +83,7 @@ Output files will appear in the working directory and will be named:
 ### Step 7. Run rapid_join. This is what generates a new fasta file from the curation manipulations
 
 ```
-perl rapid_join.pl -csv chrs.csv -fa ./test_data/ilThyBati1.PB.asm1.purge1.polish1.scaff1.decontaminated.fa -tpf rapid_prtxt_XL.tpf -out ilThyBati1_1 
+perl rapid_join.pl -csv chrs.csv -fa ./test_data/ilThyBati1.PB.asm1.purge1.polish1.scaff1.decontaminated.fa -tpf ilThyBati1.1.tpf -out ilThyBati1_1 
 
 N.B. rapid_join.pl can also be used to output a fasta file of the haplotigs by running the script with the -hap flag and using the haps_rapid_prtxt_XL.tpf file
 ```
