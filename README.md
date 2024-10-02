@@ -63,13 +63,15 @@ Ensure any gap that is edited in the map is reflected in the tpf with a ">" at t
 
 ### Step 4. Add metadata information to the assembly
 
-    "Paint" chromosomes using the chromosome paining mode. Keyboard shortcut "s". Also add any metadata tags required for example "X" "Z" "haplotig" etc. using metadata tagging mode (keyboard shortcut "m")
+"Paint" chromosomes using the chromosome paining mode. Keyboard shortcut "s". Also add any metadata tags required for example "X" "Z" "haplotig" etc. using metadata tagging mode (keyboard shortcut "m")
 
 ### Step 5. Output an AGP file from PretextView
 
 This is achieved by navigating to the menu in PretextView (keyboard shortcut "u") and clicking "Generate AGP" 
 
-### Step 6. Run rapid_prextext2tpf_XL. This takes as input your outputted agp, your edited tpf and the original fasta file. The output of this script is a csv file reflecting the chromosomes, a new tpf file that reflects the structure of what the new curated fasta will look like and a tpf file for an haplotigs that were marked in the curation.
+### Step 6. Run rapid_prextext2tpf_XL. 
+
+This takes as input your outputted agp, your edited tpf and the original fasta file. The output of this script is a csv file reflecting the chromosomes, a new tpf file that reflects the structure of what the new curated fasta will look like and a tpf file for an haplotigs that were marked in the curation.
 
 ```
 pretext-to-tpf -a ./test_data/ilThyBati1.PB.asm1.purge1.polish1.scaff1.decontaminated.fa.tpf -p ./test_data/ilThyBati1_precurated.pretext.agp_1 -o ilThyBati1.1.tpf -w -f
