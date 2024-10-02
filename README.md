@@ -2,16 +2,12 @@
 
 This session is part of [**Biodiversity Genomics Academy 2024**](https://thebgacademyBGA23.org/)
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/thebgacademy/manual-curation)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/thebgacademy/S2G-manual-curation)
 
 ## Session Leader(s)
 
 Genome Reference Informatics Team, Wellcome Sanger Institute
 
-- Jo Wood
-- Joanna Collins
-- Dominic Absolon
-- Tom Mathers
 - Michael Paulini
 - Camilla Santos
 
