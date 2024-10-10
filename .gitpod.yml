@@ -30,7 +30,7 @@ tasks:
 - name: SETUP - Download MicroFinder
   init: |
     cd /workspace
-    git clone --depth=1 https://github.com/Aquatic-Symbiosis-Genomics-Project/MicroFinder.git
+    git clone --depth=1 https://github.com/sanger-tol/MicroFinder.git
     cd MicroFinder
     bundler install
 
